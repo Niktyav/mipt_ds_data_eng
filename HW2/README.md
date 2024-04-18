@@ -15,21 +15,24 @@ id - уникальный идентификатор клиента;
 количество транзакций по соответствующим продуктам начинается с count_….   
 Для примера в таблице содержатся данные с октября 2023 года по март 2024.
 
-##Transform.## Суть витрины, которую необходимо собрать, таблица с флагами активностей клиентов по продуктам. Методика расчёта следующая: клиент считается активным по продукту за дату X, если в предыдущие 3 месяца (X, X-1 и X-2) у него были ненулевая сумма и количество транзакций по нему.  
+##Transform.  
+Суть витрины, которую необходимо собрать, таблица с флагами активностей клиентов по продуктам. Методика расчёта следующая: клиент считается активным по продукту за дату X, если в предыдущие 3 месяца (X, X-1 и X-2) у него были ненулевая сумма и количество транзакций по нему.  
 
 Но это всё за нас уже реализовали дата-саентисты. Их код для сбора итоговой витрины находится в функции transform в файле transform_script.py, его необходимо встроить в процесс.   
 
-##Load##. Итоговые результаты необходимо сохранять в csv-файл flags_activity.csv в той же директории, не перезатирая при этом данные старых расчётов в нём. 
+##Load.  
+Итоговые результаты необходимо сохранять в csv-файл flags_activity.csv в той же директории, не перезатирая при этом данные старых расчётов в нём. 
 
-##Особенности дага##: он должен запускаться по расписанию каждый месяц 5-го числа. Предполагается, что данные profit_table хранятся в общедоступной директории и пополняются ежемесячно новыми данными.
-
-
-##Результат:##
-DAG в Apache Airflow 
-![plot](https://github.com/Niktyav/mipt_ds_sspd/tree/main/HW3/img/vyatkin_roman_dags.JPG)  
-![plot](https://github.com/Niktyav/mipt_ds_sspd/tree/main/HW3/img/vyatkin_roman_graph.JPG)  
+##Особенности дага:  
+он должен запускаться по расписанию каждый месяц 5-го числа. Предполагается, что данные profit_table хранятся в общедоступной директории и пополняются ежемесячно новыми данными.
 
 
-Распараленный DAG по продуктам
-![plot](https://github.com/Niktyav/mipt_ds_sspd/tree/main/HW3/img/vyatkin_roman_dags_paralell.JPG)  
-![plot](https://github.com/Niktyav/mipt_ds_sspd/tree/main/HW3/img/vyatkin_roman_graph_paralell.JPG)  
+##Результат:  
+DAG в Apache Airflow    
+![plot](https://github.com/Niktyav/mipt_ds_data_eng/tree/main/HW3/img/vyatkin_roman_dags.JPG)   
+![plot](https://github.com/Niktyav/mipt_ds_data_eng/tree/main/HW3/img/vyatkin_roman_graph.JPG)   
+
+
+Распараленный DAG по продуктам   
+![plot](https://github.com/Niktyav/mipt_ds_data_eng/tree/main/HW3/img/vyatkin_roman_dags_paralell.JPG)   
+![plot](https://github.com/Niktyav/mipt_ds_data_eng/tree/main/HW3/img/vyatkin_roman_graph_paralell.JPG)   
