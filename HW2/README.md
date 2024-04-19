@@ -29,10 +29,10 @@ id - уникальный идентификатор клиента;
 
 ##Результат:  
 DAG в Apache Airflow    
-![plot](https://github.com/Niktyav/mipt_ds_data_eng/tree/main/HW3/img/vyatkin_roman_dags.JPG)   
-![plot](https://github.com/Niktyav/mipt_ds_data_eng/tree/main/HW3/img/vyatkin_roman_graph.JPG)   
+![plot](https://github.com/Niktyav/mipt_ds_data_eng/tree/main/HW2/img/vyatkin_roman_dags.JPG)   
+![plot](https://github.com/Niktyav/mipt_ds_data_eng/tree/main/HW2/img/vyatkin_roman_graph.JPG)   
 
 
 Распараленный DAG по продуктам   
-![plot](https://github.com/Niktyav/mipt_ds_data_eng/tree/main/HW3/img/vyatkin_roman_dags_paralell.JPG)   
-![plot](https://github.com/Niktyav/mipt_ds_data_eng/tree/main/HW3/img/vyatkin_roman_graph_paralell.JPG)   
+![plot](https://github.com/Niktyav/mipt_ds_data_eng/tree/main/HW2/img/vyatkin_roman_dags_paralell.JPG)   
+![plot](https://github.com/Niktyav/mipt_ds_data_eng/tree/main/HW2/img/vyatkin_roman_graph_paralell.JPG)   
